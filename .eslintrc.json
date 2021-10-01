@@ -23,6 +23,10 @@
       },
       "svg": "always",
       "math": "always"
-    }]
+    }],
+    "comma-dangle": [
+      "error",
+      "only-multiline"
+    ]
   }
 }
