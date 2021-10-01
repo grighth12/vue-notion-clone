@@ -1,0 +1,28 @@
+{
+  "env": {
+    "browser": true, // 브라우저 API
+    "node": true // 노드 API
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended"
+  ],
+  "rules": {
+    "indent": ["error", 2],
+    "semi": ["error", "always"], // 세미콜론 붙일꺼 안붙일꺼?
+    "quotes":["error", "single"], // 큰따옴표 작은따옴표?
+    "vue/html-closing-bracket-newline": ["error", { // > 줄바꿈 안바꿈?
+      "singleline": "never",
+      "multiline": "never"
+    }],
+    "vue/html-self-closing": ["error", { // tag 닫기
+      "html": {
+        "void": "always",
+        "normal": "never",
+        "component": "always"
+      },
+      "svg": "always",
+      "math": "always"
+    }]
+  }
+}
