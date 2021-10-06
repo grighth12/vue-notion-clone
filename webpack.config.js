@@ -13,7 +13,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/', // index.html 경로 절대경로
+    publicPath: '/', // index.html 절대경로
     clean: true,
   },
   module: {
