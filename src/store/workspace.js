@@ -52,7 +52,7 @@ export default {
 
       console.log(workspaces);
       if(!workspaces.length) {
-        dispatch('createWorkspace');
+        await dispatch('createWorkspace');
       }
     },
     async readWorkspace({ commit }, payload) {
