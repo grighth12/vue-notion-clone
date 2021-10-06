@@ -19,6 +19,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules\/(?!axios)/, // node_modules 내부에 변환해줘야할 파일이 있으면 변환, axios는 제외한다는 의미 (?!p1|p2...)
+        use: 'babel-loader'
+      },
+      {
         test: /\.vue$/,
         use: 'vue-loader',
       },
