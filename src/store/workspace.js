@@ -127,12 +127,19 @@ export default {
 };
 
 async function _request(options) {
-  const { id = '' } = options; // NOTE 새로운 문법
-  return await fetch(`https://kdt.roto.codes/documents/${id}`, {
-    headers: {
-      'Content-Type': 'application/json',
-      'x-username': 'leon'
-    },
-    ...options,
+  return await fetch('/.netlify/functions/workspace', {
+    method: 'POST',
+    body: JSON.stringify(options)
   }).then((res) => res.json());
 }
+
+// async function _request(options) {
+//   const { id = '' } = options; // NOTE 새로운 문법
+//   return await fetch(`https://kdt.roto.codes/documents/${id}`, {
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'x-username': 'leon'
+//     },
+//     ...options,
+//   }).then((res) => res.json());
+// }

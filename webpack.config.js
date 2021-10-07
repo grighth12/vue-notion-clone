@@ -65,6 +65,7 @@ module.exports = {
     }),
   ],
   devServer:{
+    port: 8079,
     historyApiFallback: true, // SPA 새로고침시 404 문제 해결
   }
 };
